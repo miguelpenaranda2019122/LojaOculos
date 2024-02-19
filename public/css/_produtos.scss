@@ -1,0 +1,90 @@
+.barra_pesquisa{
+    display: flex;
+    justify-content: center;
+    
+    .barra{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height: 50px;
+        width: 45%;
+        border-right: transparent !important;
+        border: solid 1px;
+        background-color: var(--color-bg-sections);
+        outline: none;
+        color: var(--color--barra);
+    }
+    .botao-pesquisa{
+        width: 40px;
+        border-left: transparent !important;
+        border: solid 1px;
+        background-color: var(--color-bg-sections);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.title-pesquisa{
+    color: var(--color-texto-principal);
+}
+.alguns-oculos{
+    display: grid;
+    grid-template-rows: repeat(auto, 320px);
+    grid-template-columns: repeat(4, auto);
+    gap: .8rem;
+    
+    .oculos-pesquisa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-bg-sections);
+        border-radius: 10px;
+        border: solid 2px var(--border-card);
+        height: 100%;
+        max-height: 320px;
+        max-width: 300px;
+        cursor: pointer;
+        transition: 0.6s;
+        -webkit-transition: all .6s ease;
+        text-decoration: none;
+        
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+        }
+    }
+    .oculos-pesquisa:hover{
+        transition: 0.6s;
+        transform: scale(1.06);
+    }
+}
+
+
+@media (width < 1200px) {
+    .alguns-oculos{
+        grid-template-rows: repeat(auto, 300px);
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        margin-right: 0 !important;
+    }
+}
+
+@media (width < 992px) {
+    .alguns-oculos{
+        grid-template-rows: repeat(auto, 300px);
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        margin-right: 0 !important;
+    }
+}
+
+@media (width < 768px) {
+    .alguns-oculos{
+        grid-template-rows: repeat(auto, 300px);
+        grid-template-columns: repeat(1, auto);
+        justify-content: center;
+        margin-right: 0 !important;
+    }
+}
